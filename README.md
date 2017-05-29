@@ -1,46 +1,17 @@
-List of currencies and their 3 digit codes as defined by [ISO 4217][iso-4217]. The data
-provided here is the consolidation of Table A.1 "Current currency & funds code list" and
-Table A.3 "Historic denominations".
+This is an example Data Package to demonstrate how data transforms works. In this example, we explain how getting a sample from a dataset can be done before data package gets rendered in showcase page. It assumes publisher is already familiar with Data Packages and views specifications (`views` property in Data Package specifications).
 
-Note that the [ISO page][iso-4217] offers pay-for PDFs but also links to
-<http://www.currency-iso.org/en/home/tables.html> which does provide them in machine
-readable form freely.
+### Getting sample data
 
-[iso-4217]: http://www.currency-iso.org/en/home/tables.html
+On the top of this page, you can find a table that displays filtered data. Raw data is displayed in preview section. As you can see we are getting sample of 15 rows from the initial data. This is described in the second view object of `views` property:
 
-## Data
+* `"specType": "table"` - this way we define the view as a table (other options are `"simple"` (renders a graph and accepts Plotly spec) and `"vega"` (renders a graph and accepts Vega spec)).
+* `"resources"` property is an array of objects in this case, where publishers can define data transforms they want to apply.
+* `"name"` - name of the resource as a reference.
+* `"transform"` - array of transforms. Each transform is an object, which properties vary depending on transform type. Only common property is `"type"` that is used to specify transform type.
 
-The data provided (see data/codes.csv) in this data package provides a
-consolidated list of currency (and funds) codes by combining these two
-separate tables:
+Transform properties for "sample":
 
-* [ISO Tables A.1 - Current Currencies and Funds][a1]
-* [ISO Tables A.3 - List of codes for historic denominations of currencies & funds][a3]
+* `"type": "sample"` - this way we define the transform to be a sample.
+* `"size"` - any integer that will be used as a size of a sample data.
 
-[a1]: http://www.currency-iso.org/en/home/tables/table-a1.html
-[a3]: http://www.currency-iso.org/en/home/tables/table-a3.html
-
-## Preparation
-
-Run the following script to download and convert the data from XML to
-CSV:
-
-```
-cd scripts/
-./runall.sh
-```
-
-The raw XML files are stored in `./archive`. The cleaned data are
-`./data/codes-all.csv`.
-
-## Version
-
-The current tables have a published date of 28 March 2014 (as indicated
-in the XML files).
-
-## License
-
-Placing in the Public Domain under the Public Domain Dedication and License.
-The original site states no restriction on use and the data is small and
-completely factual.
-
+{{ dp.json }}

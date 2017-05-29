@@ -1,6 +1,6 @@
 {
-  "name": "currency-codes",
-  "title": "ISO 4217 Currency Codes",
+  "name": "example-sample-transform-on-currency-codes",
+  "title": "Example sample transform on ISO 4217 Currency Codes",
   "licenses": [
     {
       "id": "odc-pddl",
@@ -30,6 +30,7 @@
   ],
   "resources": [
     {
+      "name": "codes-all",
       "path": "data/codes-all.csv",
       "mimetype": "text/csv",
       "size": "16863",
@@ -71,6 +72,23 @@
           }
         ]
       }
+    }
+  ],
+  "views": [
+    {
+      "name": "sample-view",
+      "specType": "table",
+      "resources": [
+        {
+          "name": "codes-all",
+          "transform": [
+            {
+              "type": "sample",
+              "size": 15
+            }
+          ]
+        }
+      ]
     }
   ]
 }
