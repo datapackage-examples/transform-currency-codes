@@ -8,24 +8,36 @@
       "url": "http://opendatacommons.org/licenses/pddl/"
     }
   ],
-  "keywords": [ "iso", "iso-4217", "currency", "codes" ],
+  "keywords": [
+    "iso",
+    "iso-4217",
+    "currency",
+    "codes"
+  ],
   "homepage": "http://www.iso.org/iso/currency_codes",
-  "sources": [{
-    "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
-    "email": "office@currency-iso.org"
-  }],
-  "maintainer": [{
-    "name": "Rufus Pollock",
-    "email": "rufus.pollock@okfn.org"
-  }],
-  "contributors": [
+  "sources": [
+    {
+      "name": "SIX Interbank Clearing Ltd (on behalf of ISO)",
+      "email": "office@currency-iso.org",
+      "title": "SIX Interbank Clearing Ltd (on behalf of ISO)"
+    }
+  ],
+  "maintainer": [
     {
       "name": "Rufus Pollock",
       "email": "rufus.pollock@okfn.org"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "rufus_pollock",
+      "email": "rufus.pollock@okfn.org",
+      "title": "rufus_pollock"
     },
     {
-      "name": "Kristofer D. Kusano",
-      "email": "kdkusano@gmail.com"
+      "name": "kristofer_d._kusano",
+      "email": "kdkusano@gmail.com",
+      "title": "kristofer_d._kusano"
     }
   ],
   "resources": [
@@ -55,13 +67,13 @@
           {
             "name": "NumericCode",
             "title": "Numeric Code",
-            "type": "integer",
+            "type": "number",
             "description": "3 digit numeric code"
           },
           {
             "name": "MinorUnit",
             "title": "Minor Unit",
-            "type": "number",
+            "type": "string",
             "description": ""
           },
           {
