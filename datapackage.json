@@ -1,11 +1,11 @@
 {
   "name": "example-sample-transform-on-currency-codes",
   "title": "Example sample transform on ISO 4217 Currency Codes",
-  "licenses": [
+  "licensces": [
     {
-      "id": "odc-pddl",
-      "label": "Open Data Commons Public Domain Dedication and Licence (PDDL)",
-      "url": "http://opendatacommons.org/licenses/pddl/"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
   "keywords": [
@@ -22,17 +22,12 @@
       "title": "SIX Interbank Clearing Ltd (on behalf of ISO)"
     }
   ],
-  "maintainer": [
-    {
-      "name": "Rufus Pollock",
-      "email": "rufus.pollock@okfn.org"
-    }
-  ],
   "contributors": [
     {
       "name": "rufus_pollock",
       "email": "rufus.pollock@okfn.org",
-      "title": "rufus_pollock"
+      "title": "rufus_pollock",
+      "role": "maintainer"
     },
     {
       "name": "kristofer_d._kusano",
